@@ -6,7 +6,7 @@ Problema de sincronização quando realiza o cadastro dos voos.
 
 Necessário:
 
-Refatorar classes
-Configurações css
-Rever a abordagem do tratamento das excessões
-Outros
+Refatorar classes;
+Configurações css;
+Rever a abordagem do tratamento das excessões;
+Outros.
