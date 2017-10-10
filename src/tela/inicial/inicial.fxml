@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.inicial.InicialController">
+    <stylesheets>
+        <URL value="@padraoCSS.css" />
+        <URL value="@inicial.css" />
+    </stylesheets>
+    <children>
+        <Pane id="painelPrincipal" prefHeight="502.0" prefWidth="1105.0" styleClass="painelInicial">
+            <children>
+                <VBox layoutX="37.0" layoutY="112.0" prefHeight="376.0" prefWidth="211.0" styleClass="menuEsquerdo">
+                    <children>
+                        <ImageView id="imageViewNorteAcordeon" fitHeight="50.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true" />
+                        <Accordion prefHeight="204.0" prefWidth="242.0">
+                            <panes>
+                                <TitledPane animated="false" prefHeight="100.0" prefWidth="242.0" styleClass="menuAccordion" text="Cadastros">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="214.0">
+                                            <children>
+                                                <Label fx:id="lblCadastroVoo" layoutX="17.0" layoutY="45.0" text="Vôo">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                                <Label fx:id="lblCadastroPassageiro" layoutX="17.0" layoutY="14.0" text="Passageiro">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" prefHeight="112.0" prefWidth="242.0" styleClass="menuAccordion" text="Consultas">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="214.0">
+                                            <children>
+                                                <Label fx:id="lblListaPassageiros" layoutX="14.0" layoutY="7.0" text="Lista de Passageiros">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                                <Label fx:id="lblPassageirosEmEspera" layoutX="14.0" layoutY="32.0" text="Passageiros em Espera">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                                <Label fx:id="lblVoosCadastrados" layoutX="14.0" layoutY="56.0" prefHeight="19.0" prefWidth="163.0" text="Vôos Cadastrados">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" prefHeight="376.0" prefWidth="346.0" styleClass="menuAccordion" text="Cancelamentos">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="344.0">
+                                            <children>
+                                                <Label fx:id="lblCancelaReserva" layoutX="14.0" layoutY="14.0" text="Reseva de Passageiro">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                                <Label fx:id="lblCancelaVoo" layoutX="14.0" layoutY="45.0" text="Vôo">
+                                                    <styleClass>
+                                                        <String fx:value="itemAccordion" />
+                                                        <String fx:value="handCursor" />
+                                                    </styleClass>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane animated="false" prefHeight="100.0" prefWidth="242.0" styleClass="menuAccordion" text="Ajuda">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="214.0" />
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                    </children>
+                </VBox>
+                <ImageView id="imageViewEmpresa" fitHeight="70.0" fitWidth="1072.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="imagemHorizontal95" />
+            <TabPane fx:id="paneTabs" layoutX="309.0" layoutY="112.0" prefHeight="370.0" prefWidth="777.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabVoos" text="Vôos Cadastrados">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="775.0">
+                           <children>
+                              <ListView fx:id="listViewVoos" layoutX="17.0" layoutY="64.0" prefHeight="265.0" prefWidth="738.0" />
+                              <Label layoutX="17.0" layoutY="38.0" prefHeight="17.0" prefWidth="738.0" text="LISTA DE VOOS CADASTRADOS" />
+                              <Button fx:id="btnAtualizar" layoutX="233.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Atualizar" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabPassageiros" text="Passageiros">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtFiltroPassageiroVoo" alignment="CENTER_RIGHT" layoutX="114.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" />
+                              <Label fx:id="lblFiltroPassageiroVoo" layoutX="126.0" layoutY="39.0" prefHeight="17.0" prefWidth="100.0" text="Código do Vôo:" />
+                              <Label layoutX="386.0" layoutY="39.0" prefHeight="17.0" prefWidth="100.0" text="Nome do cliente:" />
+                              <Label layoutX="14.0" layoutY="39.0" prefHeight="17.0" prefWidth="87.0" text="FILTRAR POR:" />
+                              <TextField fx:id="txtFiltroPassageiroNome" layoutX="513.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" />
+                              <ListView fx:id="listViewPassageiros" layoutX="17.0" layoutY="125.0" prefHeight="204.0" prefWidth="738.0" />
+                              <Label layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="738.0" text="PASSAGEIROS LISTADOS" />
+                              <Button fx:id="btnFiltroPassageiro" layoutX="242.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="341.0" text="Pesquisar" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabFilaEspera" text="Fila de Espera">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="39.0" prefHeight="17.0" prefWidth="87.0" text="FILTRAR POR:" />
+                              <Label layoutX="386.0" layoutY="39.0" prefWidth="100.0" text="Nome do cliente:" />
+                              <TextField fx:id="txtFiltroEsperaPassageiroVoo" alignment="TOP_RIGHT" layoutX="116.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" />
+                              <TextField fx:id="txtFiltroEsperaPassageiroNome" layoutX="513.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" />
+                              <ListView fx:id="listViewEsperaPassageiros" layoutX="17.0" layoutY="125.0" prefHeight="204.0" prefWidth="738.0" />
+                              <Label layoutX="17.0" layoutY="104.0" prefHeight="25.0" prefWidth="341.0" text="PASSAGEIROS NA FILA DE ESPERA" />
+                              <Button fx:id="btnFiltroEsperaPassageiro" layoutX="242.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="352.0" text="Pesquisar" />
+                              <Label fx:id="lblFiltroEsperaPassageiroVoo" layoutX="126.0" layoutY="39.0" prefHeight="17.0" prefWidth="95.0" text="Código do Vôo:" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabCancelamentos" text="Cancelamentos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="listViewCancelamentoVoo" layoutX="52.0" layoutY="88.0" prefHeight="204.0" prefWidth="320.0" />
+                              <ListView fx:id="listViewCancelamentoPassageiro" layoutX="426.0" layoutY="89.0" prefHeight="204.0" prefWidth="320.0" />
+                              <Label layoutX="52.0" layoutY="71.0" prefHeight="17.0" prefWidth="320.0" text="Vôos listados para cancelamento" />
+                              <Label layoutX="426.0" layoutY="71.0" prefHeight="17.0" prefWidth="320.0" text="Passageiros Listados para cancelamento" />
+                              <TextField fx:id="txtFiltroCancelamentoVoo" alignment="TOP_RIGHT" layoutX="51.0" layoutY="40.0" prefHeight="25.0" prefWidth="321.0" />
+                              <Label fx:id="lblFiltroCancelamentoVoo" layoutX="72.0" layoutY="44.0" prefHeight="17.0" prefWidth="160.0" text="Filtar por cógigo do Voo:" />
+                              <TextField fx:id="txtFiltroCancelamentoPassageiro" alignment="CENTER_RIGHT" layoutX="426.0" layoutY="40.0" prefHeight="25.0" prefWidth="320.0" />
+                              <Label fx:id="lblFiltroCancelamentoPassageiro" layoutX="440.0" layoutY="44.0" prefHeight="17.0" prefWidth="160.0" text="Filtar por código do Voo:" />
+                              <Button fx:id="btnCancelarVoo" layoutX="53.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="319.0" text="Cancelar" />
+                              <Button fx:id="btnCancelarPassageiro" layoutX="427.0" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="319.0" text="Cancelar" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

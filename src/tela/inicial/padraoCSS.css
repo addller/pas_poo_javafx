@@ -1,0 +1,62 @@
+
+/*h - tipo html -> para titulos*/
+.h1{
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-font-size: 25;
+}
+
+.h2{
+    -fx-padding: 17;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-opacity: .9;
+}
+
+.h3{
+    -fx-padding: 13;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-font-size: 15; 
+    -fx-opacity: .8;
+}
+
+.handCursor{
+    -fx-cursor: hand;    
+}
+
+.p{
+    -fx-padding: 5;
+    -fx-spacing: 10;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 12; 
+    -fx-border-style: solid;
+}
+.titleListView{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+}
+.listView{
+    -fx-pref-height: 25;
+    -fx-border-color: blueviolet;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+}
+
+.center{
+    -fx-alignment: CENTER;
+}
+.borderPadrao{
+    -fx-border-color: black;
+    -fx-border-insets: .3;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+}
+
+.comboPadrao{ 
+    -fx-pref-width: 135;
+    -fx-max-width: 135;
+}

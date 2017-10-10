@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="564.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.cadastro_passageiro.CadastroPassageiroController">
+    <stylesheets>
+        <URL value="@cadastroPassageiro.css" />
+    </stylesheets>
+    <children>
+        <Pane layoutY="1.0" prefHeight="523.0" prefWidth="564.0" styleClass="PanelFormPrincipal">
+            <children>
+                <Label layoutX="34.0" layoutY="99.0" prefHeight="17.0" prefWidth="100.0" styleClass="labelForm" text="Nome do Cliente:" />
+                <TextField fx:id="txtNomeCliente" layoutX="141.0" layoutY="95.0" prefHeight="25.0" prefWidth="373.0" styleClass="txtForm" />
+                <Label layoutX="28.0" layoutY="51.0" prefHeight="17.0" prefWidth="481.0" styleClass="tituloInformativo" text="COMPRAR PASSAGEM" textAlignment="CENTER" textFill="#0b2687" />
+                <Label layoutX="34.0" layoutY="141.0" prefWidth="100.0" styleClass="lblForm" text="Origem:" />
+                <Label layoutX="299.0" layoutY="141.0" prefHeight="17.0" prefWidth="57.0" styleClass="lblForm" text="Destino:" />
+                <TextField fx:id="txtOrigem" layoutX="141.0" layoutY="137.0" prefHeight="25.0" prefWidth="145.0" styleClass="txtForm" />
+                <TextField fx:id="txtDestino" layoutX="370.0" layoutY="137.0" prefHeight="25.0" prefWidth="145.0" styleClass="txtForm" />
+                <Button fx:id="btnComprarPassagem" layoutX="314.0" layoutY="416.0" mnemonicParsing="false" onAction="#submeter" prefHeight="68.0" prefWidth="200.0" styleClass="btnFormConfirmar" text="Comprar Passagem" />
+                <Button fx:id="btnVoltar" layoutX="216.0" layoutY="416.0" mnemonicParsing="false" onAction="#voltar" prefHeight="68.0" prefWidth="79.0" styleClass="btnFormVoltar" text="Voltar" />
+                <TableView fx:id="tableVoosDisponiveis" layoutX="34.0" layoutY="194.0" prefHeight="200.0" prefWidth="481.0">
+                    <columns>
+                        <TableColumn prefWidth="100.0" text="Código do Vôo">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="codigo" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="4.0" prefWidth="150.0" text="Origem">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="origem" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="0.0" prefWidth="165.0" text="Destino">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="destino" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="0.0" prefWidth="65.0" text="Escalas">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="escala" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            <ImageView fx:id="imagePesquisar" fitHeight="25.0" fitWidth="25.0" layoutX="489.0" layoutY="137.0" onMouseEntered="#lupaInativa" onMouseExited="#lupaAtiva" onMouseReleased="#pesquisarVoos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagem/lupa_25_on.png" />
+               </image></ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

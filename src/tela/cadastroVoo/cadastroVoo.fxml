@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="522.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.cadastroVoo.CadastroVooController">
+    <stylesheets>
+        <URL value="@cadastroVoo.css" />
+    </stylesheets>
+    <children>
+        <Pane prefHeight="522.0" prefWidth="522.0" styleClass="panelFormPrincipal">
+            <children>
+                <Pane layoutX="21.0" layoutY="23.0" prefHeight="232.0" prefWidth="481.0" styleClass="panelFormDados">
+                    <children>
+                        <Label layoutX="18.0" layoutY="73.0" prefHeight="17.0" prefWidth="64.0" styleClass="labelForm" text="Código:" />
+                        <Label layoutX="18.0" layoutY="112.0" styleClass="labelForm" text="Origem:" />
+                        <TextField fx:id="txtCodigo" layoutX="101.0" layoutY="69.0" prefHeight="25.0" prefWidth="109.0" styleClass="txtForm" />
+                        <TextField fx:id="txtOrigem" layoutX="101.0" layoutY="108.0" prefHeight="25.0" prefWidth="359.0" styleClass="txtForm" />
+                        <Label layoutX="18.0" layoutY="149.0" styleClass="labelForm" text="Destino:" />
+                        <TextField fx:id="txtDestino" layoutX="101.0" layoutY="145.0" prefHeight="25.0" prefWidth="359.0" styleClass="txtForm" />
+                        <Label layoutX="229.0" layoutY="73.0" prefHeight="17.0" prefWidth="132.0" styleClass="labelForm" text="Máximo de Passageiros:" />
+                        <TextField fx:id="txtMaximoPassageiros" layoutX="378.0" layoutY="69.0" prefHeight="25.0" prefWidth="82.0" styleClass="txtForm" />
+                        <Label layoutX="20.0" layoutY="22.0" prefHeight="17.0" prefWidth="441.0" styleClass="tituloInformativo" text="CADASTRO DE VÔO" textAlignment="CENTER" textFill="#0b2687" />
+                  <Label layoutX="17.0" layoutY="184.0" prefHeight="17.0" prefWidth="43.0" text="Escala:" />
+                  <TextField fx:id="txtEscala" layoutX="101.0" layoutY="184.0" prefHeight="25.0" prefWidth="195.0" />
+                        <Button fx:id="btnInserirEscala" layoutX="309.0" layoutY="184.0" mnemonicParsing="false" onAction="#inserirEscala" prefHeight="25.0" prefWidth="152.0" styleClass="btnForm" text="Inserir Escala" />
+                    </children>
+                </Pane>
+                <Pane layoutX="21.0" layoutY="271.0" prefHeight="183.0" prefWidth="481.0">
+                    <children>
+                        <TableView fx:id="tableEscala" layoutX="20.0" layoutY="20.0" prefHeight="139.0" prefWidth="441.0" styleClass="tableForm">
+                            <columns>
+                                <TableColumn prefWidth="440.0" text="Escalas">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="nomeLocal" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </children>
+                </Pane>
+                <Button fx:id="btnVoltar" layoutX="237.0" layoutY="466.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="82.0" styleClass="btnForm" text="Voltar" />
+                <Button fx:id="btnCadastrarVoo" layoutX="344.0" layoutY="466.0" mnemonicParsing="false" onAction="#submeter" prefHeight="25.0" prefWidth="138.0" styleClass="btnForm" text="Cadastrar" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

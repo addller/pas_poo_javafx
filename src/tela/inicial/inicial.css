@@ -1,0 +1,47 @@
+
+.mainFxmlClass {
+
+}
+
+.painelInicial{
+    -fx-background-color: rgb(240,240,255)
+}
+
+.labelForm{
+    -fx-text-alignment: left;
+    -fx-background-color: rgba(185,125,185,.55);
+    -fx-border-color: red;
+    -fx-border-width: 15;
+    -fx-fill: blanchedalmond;
+
+}
+
+.imagemHorizontal95{
+    -fx-border-color: red;
+    -fx-border-radius: 5;
+}
+
+.menuAccordion{
+    -fx-alignment: CENTER;
+    -fx-text-fill: darkslateblue;
+    -fx-font: bold 15px Tahoma;
+    -fx-stroke: red;
+    -fx-stroke-width: 1;
+}
+.itemAccordion{
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: brown;
+    -fx-font: bolder italic 16px cursive;
+    -fx-opacity: .85;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+    -fx-stroke: red;
+    -fx-stroke-width: 4;  
+    -fx-font-smoothing-type: lcd;
+    -fx-effect: dropshadow( gaussian , black , 1 , 0.0 , 1 , 0 );
+    -fx-min-width: 200px;
+}
+
+defaultBorder{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
